@@ -21,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 .logo{
     margin-left: 10%;
@@ -84,51 +85,60 @@
     margin-left: 10px;
     font-size: 20px;
 }
-#menu-toggle{
+.nav-toggle{
     display: none;
 }
 
-.menu-icon{
+.nav-toggle-label{
     display: none;
-    font-size: 28px;
-    color: rgb(226, 13, 13);
     cursor: pointer;
 }
-@media (max-width: 768px){
-    .menu-icon{
+
+.nav-toggle-label span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: black;
+    margin: 5px;
+    transition: 0.3s ease;
+}
+@media (max-width: 760px){
+
+    .nav-toggle-label{
         display: block;
-    }
-    .navbar{
         position: absolute;
-        top: 80px;
-        left: 50%;
-        width: 100%;
-        background: rgb(255, 254, 254);
-        display: none;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        right: 20px;
+        top: 25px;
+        z-index: 2000;
     }
-    .navbar ul{
+    .nav{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: white;
+        padding-top: 100px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+    .nav ul{
         flex-direction: column;
-        padding: 0;
-        margin: 0;
+        align-items: center;
+        gap: 30px;
     }
-    .navbar ul li{
-        width: 100%;
-        border-bottom: 1px solid #ddd;
+    .nav-toggle:checked ~ .nav{
+        right: 0;
     }
-    .navbar ul li a{
-        display: block;
-        padding: 15px;
-        color: #1F2937;
+    .nav-toggle:checked + .nav-toggle-label span:nth-child(1){
+        transform: rotate(45deg) translate(5px, 5px);
     }
-    .navbar ul li a:hover{
-        background: #f4f4f4;
-        color: #0F766E;
-        transition: 0.3s ease;
-        font-size: 0.95rem;
-        font-weight: 500;
+
+    .nav-toggle:checked + .nav-toggle-label span:nth-child(2){
+        opacity: 0;
     }
-    #menu-toggle:checked ~ .navbar{
-        display: block;
+
+    .nav-toggle:checked + .nav-toggle-label span:nth-child(3){
+        transform: rotate(-45deg) translate(6px, -6px);
     }
 }
