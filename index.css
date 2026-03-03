@@ -80,3 +80,55 @@
     padding: 10px;
     font-size: 20px;
 }
+.icons i{
+    margin-left: 10px;
+    font-size: 20px;
+}
+#menu-toggle{
+    display: none;
+}
+
+.menu-icon{
+    display: none;
+    font-size: 28px;
+    color: rgb(226, 13, 13);
+    cursor: pointer;
+}
+@media (max-width: 768px){
+    .menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        width: 100%;
+        background: rgb(255, 254, 254);
+        display: none;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .navbar ul{
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    .navbar ul li{
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+    .navbar ul li a{
+        display: block;
+        padding: 15px;
+        color: #1F2937;
+    }
+    .navbar ul li a:hover{
+        background: #f4f4f4;
+        color: #0F766E;
+        transition: 0.3s ease;
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+    #menu-toggle:checked ~ .navbar{
+        display: block;
+    }
+}
