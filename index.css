@@ -37,7 +37,6 @@
 }
 .logo h1 span{
     font-family: 'Clicker script', cursive;
-    font-family: 40px;
 }
 .logo h1::before{
     content: '';
@@ -141,4 +140,20 @@
     .nav-toggle:checked + .nav-toggle-label span:nth-child(3){
         transform: rotate(-45deg) translate(6px, -6px);
     }
+    .logo{
+        margin-left: 2%;
+    }
+    .logo h1{
+        font-size: 11%;
+        padding: 8px 7px;
+    }
+   .logo h1::before, .logo h1::after{
+    width: 10%;
+    height: 30%;
+    border-width: 2px;
+   }
+   .icons input{
+    padding:5px;
+    width: 50%;
+   }
 }
