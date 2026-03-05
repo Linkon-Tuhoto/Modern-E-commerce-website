@@ -22,6 +22,7 @@ main{
     padding: 10px;
     padding-bottom: 20px;
     z-index: 3000;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 .allheader{
     display: flex;
@@ -71,9 +72,13 @@ main{
 }
 .nav ul li a{
     text-decoration: none;
-    color: #cd03bcf9;
+    color: var(--text-black-900);
     font-size: 20px;
     font-weight: 700;
+    transition: color 0.3s ease;
+}
+.nav ul li a:hover {
+    color: var(--skin-color);
 }
 .icons{
     display: inline-block;
@@ -107,19 +112,77 @@ main{
     margin: 5px;
     transition: 0.3s ease;
 }
-@media(max-width: 480px) , (max-width: 760px) , (max-width: 1024px){
-    main{
+@media (min-width: 481px) {
+    .nav-toggle-label {
+        display: none;
+    }
+    .nav {
+        display: block;
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        padding-top: 0;
+        box-shadow: none;
+    }
+    .nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+    .nav ul li {
+        border-bottom: none;
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 80px;
+    }
+    .header {
+        padding: 5px;
+    }
+    .logo h1 {
+        font-size: 24px;
+        padding: 10px 15px;
+    }
+    .nav ul li {
+        margin-left: 20px;
+    }
+    .nav ul li a {
+        font-size: 18px;
+    }
+    .icons input {
+        padding: 8px;
+        font-size: 16px;
+    }
+    .icons i {
+        font-size: 18px;
+    }
+    .homepage h1 {
+        font-size: 50px;
+    }
+    .homepage p {
+        font-size: 24px;
+        padding: 15px;
+    }
+    .homepage {
+        height: 80vh; /* Slightly less than full height on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    main {
         padding-top: 70px;
     }
-
-    .nav-toggle-label{
+    .nav-toggle-label {
         display: block;
         position: absolute;
         right: 2px;
         top: 1px;
         z-index: 2000;
     }
-    .nav{
+    .nav {
         position: fixed;
         top: 0;
         right: -100%;
@@ -130,72 +193,106 @@ main{
         transition: right 0.3s ease;
         box-shadow: -5px 0 15px rgba(0,0,0,0.1);
     }
-    .nav ul{
+    .nav ul {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
-    .nav ul li{
-        border-bottom: 2px solid red;
+    .nav ul li {
+        border-bottom: 2px solid #ec1839;
         padding: 20px;
+        margin-left: 0;
     }
-    .nav-toggle:checked ~ .nav{
+    .nav ul li a {
+        font-size: 16px;
+        color: #302e4d;
+    }
+    .nav-toggle:checked ~ .nav {
         right: 0;
     }
-    .nav-toggle:checked + .nav-toggle-label span:nth-child(1){
+    .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
-
-    .nav-toggle:checked + .nav-toggle-label span:nth-child(2){
+    .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
         opacity: 0;
     }
-
-    .nav-toggle:checked + .nav-toggle-label span:nth-child(3){
+    .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
         transform: rotate(-45deg) translate(6px, -6px);
     }
-    .logo{
+    .logo {
         margin-left: 2%;
     }
-    .logo h1{
-        font-size: 11%;
+    .logo h1 {
+        font-size: 20px;
         padding: 8px 7px;
+        letter-spacing: 2px;
     }
-   .logo h1::before, .logo h1::after{
-    width: 10%;
-    height: 30%;
-    border-width: 2px;
-   }
-   .icons input{
-    padding:5px;
-    width: 55%;
-    font-size: 10px;
-   }
-   .icons i{
-    margin-left: 1px;
-    font-size: 12px;
-   }
+    .logo h1::before, .logo h1::after {
+        width: 10px;
+        height: 10px;
+        border-width: 2px;
+    }
+    .icons input {
+        padding: 5px;
+        width: 55%;
+        font-size: 14px;
+    }
+    .icons i {
+        margin-left: 5px;
+        font-size: 16px;
+    }
+    .homepage h1 {
+        font-size: 36px;
+    }
+    .homepage p {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .homepage {
+        height: 70vh;
+        padding: 0 10px;
+    }
+    button.shop {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
 }
 .homepage{
     background-image: url(womanimage1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
-    height: 600px;
-    padding-top: 100px;
-    padding-left: 300px;
+    height: 100vh; /* Use viewport height for full screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
 }
 .homepage h1{
     font-size: 80px;
     letter-spacing: 2px;
     font-weight: 700;
+    color: white; /* Assuming text should be visible on image */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Add shadow for readability */
 }
 .homepage p{
     font-size: 40px;
     font-weight: 600;
     padding: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
-button {
+button.shop {
     background-color: #504e70;
-    padding: 17px;
+    padding: 17px 30px;
     font-size: 16px;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button.shop:hover {
+    background-color: #ec1839; /* Skin color on hover */
 }
