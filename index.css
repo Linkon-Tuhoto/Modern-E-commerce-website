@@ -262,7 +262,7 @@ main{
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 100vh; /* Use viewport height for full screen */
+    height: 70vh; /* Use viewport height for full screen */
     display: flex;
     flex-direction: column;
     justify-content: center;
