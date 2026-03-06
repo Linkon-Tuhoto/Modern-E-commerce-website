@@ -297,14 +297,37 @@ button.shop:hover {
     background-color: #ec1839; /* Skin color on hover */
 }
 .after{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
-.women{
-    background-image: url(womanimage2.jpg);
+.after-card{
+    height: 300px;
     background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
 }
-.women h2{
-    text-align: center;
+.after-card:nth-child(1){
+    background-image: url(womanimage2.jpg);
+}
+.after-card:nth-child(2){
+    background-image: url(womanimage2.jpg);
+}
+.after-card:nth-child(3){
+    background-image: url(womanimage2.jpg);
+}
+.card{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 15px;
+}
+@media (max-width: 480px), (max-width:768px){
+    .after{
+        grid-template-columns: 1fr;
+    }
 }
