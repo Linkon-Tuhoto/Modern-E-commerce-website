@@ -296,3 +296,15 @@ button.shop {
 button.shop:hover {
     background-color: #ec1839; /* Skin color on hover */
 }
+.after{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.women{
+    background-image: url(womanimage2.jpg);
+    background-size: cover;
+}
+.women h2{
+    text-align: center;
+}
