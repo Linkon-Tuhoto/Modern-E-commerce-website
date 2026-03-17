@@ -348,6 +348,7 @@ button.shop:hover {
     text-align: center;
     height: 100%;
     padding: 20px;
+    margin: 20px;
 }
 .containercard img{
     width: 22rem;
@@ -382,4 +383,39 @@ button.shop:hover {
 }
 .addbtn button:hover{
     background-color: #be273e;
+}
+.slider{
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.slides{
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slides img{
+  width: 100%;
+  flex-shrink: 0;
+  height: 300px;
+  object-fit: cover;
+}
+.dots{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dots span{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: gray;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.dots .active{
+  background: black;
 }
