@@ -22,7 +22,7 @@ setInterval(()=>{
   index = (index + 1) % total;
   showSlide(index);
 },3000);*/
-l/*et index = 0;
+let index = 0;
 const slides = document.querySelector(".slides");
 const dots = document.querySelectorAll(".dots span");
 
@@ -38,7 +38,7 @@ dots.forEach((dot, i)=>{
     index = i;
     showSlide(index);
   });
-});*/
+});
 /*let index = 0;
 const slider = document.querySelector(".slider");
 const slides = document.querySelector(".slides");
@@ -75,7 +75,7 @@ slider.addEventListener("touchend", (e)=>{
 });*/
 
 // show first slide
-/*showSlide(index);
+showSlide(index);
 let startX = 0;
 
 slides.addEventListener("touchstart", (e)=>{
@@ -106,8 +106,8 @@ function nextSlide(){
 // stop auto when user interacts
 dots.forEach(dot=>{
   dot.addEventListener("click", ()=> clearInterval(auto));
-});*/
-let index = 0;
+});
+/*let index = 0;
 
 const slider = document.querySelector(".slider");
 const slides = document.querySelector(".slides");
@@ -160,4 +160,4 @@ slider.addEventListener("touchend", (e)=>{
 });
 
 // INITIAL LOAD
-showSlide(index);
+showSlide(index);*/
