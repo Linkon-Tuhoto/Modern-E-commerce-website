@@ -264,7 +264,7 @@ main{
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 70vh; /* Use viewport height for full screen */
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -276,8 +276,8 @@ main{
     font-size: 80px;
     letter-spacing: 2px;
     font-weight: 700;
-    color: white; /* Assuming text should be visible on image */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Add shadow for readability */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 .homepage p{
     font-size: 40px;
@@ -333,4 +333,53 @@ button.shop:hover {
     .after{
         grid-template-columns: 1fr;
     }
+}
+.newarrivals{
+    background: #d8d7d7;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.containercard{
+    background: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+}
+.containercard img{
+    width: 22rem;
+}
+.cardtext h3{
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 10px;
+}
+.cardtext p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.addcart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.price p{
+    color: #ec1839;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+.addbtn button{
+    background-color: #ec1839;
+    color: #FFFFFF;
+    padding: 7px 15px;
+    font-size: 1.2rem;
+    border: none;
+}
+.addbtn button:hover{
+    background-color: #be273e;
 }
