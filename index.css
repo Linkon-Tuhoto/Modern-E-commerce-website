@@ -419,3 +419,8 @@ button.shop:hover {
 .dots .active{
   background: black;
 }
+@media (max-width: 480px), (max-width:768px){
+    .newarrivals{
+        grid-template-columns: 1fr;
+    }
+}
