@@ -424,3 +424,16 @@ button.shop:hover {
         grid-template-columns: 1fr;
     }
 }
+.popular-categories{
+    background-color: #f5f5f7;
+   
+}
+.product-images-all{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 30px;
+}
+.products-images img{
+    width: 10rem;
+    margin-left: 100px;
+}
