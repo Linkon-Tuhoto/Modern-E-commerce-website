@@ -338,8 +338,15 @@ button.shop:hover {
     background: #d8d7d7;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+}
+.top-newarrivals{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 100px;
 }
 .containercard{
     background: #FFFFFF;
@@ -436,4 +443,7 @@ button.shop:hover {
 .products-images img{
     width: 10rem;
     margin-left: 100px;
+}
+.product-card{
+    text-align: center;
 }
