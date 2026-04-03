@@ -454,7 +454,7 @@ button.shop:hover {
     left: 0;
     padding: 30px;
     border-right:1px solid var(--bg-black-50);
-    top: 0;
+    top: 400px;
     height: 100%;
     display: flex;
     justify-content: center;
