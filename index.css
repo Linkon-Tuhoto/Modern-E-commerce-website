@@ -447,3 +447,17 @@ button.shop:hover {
 .product-card{
     text-align: center;
 }
+.aside{
+    width: 270px;
+    background: var(--bg-black-100);
+    position: fixed;
+    left: 0;
+    padding: 30px;
+    border-right:1px solid var(--bg-black-50);
+    top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
