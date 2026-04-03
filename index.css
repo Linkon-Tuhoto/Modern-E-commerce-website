@@ -428,7 +428,7 @@ button.shop:hover {
     background-color: #f5f5f7;
    
 }
-.product-images-all{
+.products{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     margin: 30px;
