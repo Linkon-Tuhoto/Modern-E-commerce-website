@@ -430,6 +430,9 @@ button.shop:hover {
     .newarrivals{
         grid-template-columns: 1fr;
     }
+    .addbtn button{
+        padding: 5px 5px;
+    }
 }
 .popular-categories{
     background-color: #f5f5f7;
