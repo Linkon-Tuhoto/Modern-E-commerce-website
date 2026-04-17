@@ -464,3 +464,15 @@ button.shop:hover {
     align-items: center;
     z-index: 10;
 }
+@media (max-width: 480px), (max-width:768px){
+    .products{
+        grid-template-columns: 1fr;
+    }
+    .products-images img{
+        width: 100%;
+        margin-left: 0;
+    }
+    .aside{
+        display: none;
+    }
+}
